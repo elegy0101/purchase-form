@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Flujo de compra</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap_custom.css" />
+</head>
+<body>
+	<!-- multistep form -->
+	<form id="msform">
+		<!-- progress bar -->
+		<ul id="progressbar">
+			<li class="active">Elegir paquete</li>
+			<li>Buscar dominio</li>
+			<li class="order">Confirmar orden</li>
+			<li>Inicia sesión</li>
+			<li>Pagar</li>
+		</ul>
+		<!-- fieldsets -->
+		<!-- Select plan -->
+		<fieldset>
+			<h2 class="fs-title">Selecciona tu paquete</h2>
+			<h3 class="fs-subtitle">Paso 1</h3>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="plan-basic">
+						<h3 class="plan-title">10 GB</h3>
+						<p class="plan-price">$1.49 USD mes<span class="plan-unit">por cuenta</span></p>
+						<ul class="plan-features">
+							<li class="plan-feature">IMAP /  <span class="plan-feature-name">POP 3</span></li>
+							<li class="plan-feature">99.999 % <span class="plan-feature-name">Uptime</span></li>
+							<li class="plan-feature">Triple <span class="plan-feature-name">Protección Anti Spam/Virus</span></li>
+						</ul>
+						<a href="#" class="basic plan-button">Elegir plan</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="plan plan-highlight">
+						<p class="plan-recommended">Recomendado</p>
+						<h3 class="plan-title">25 GB</h3>
+						<p class="plan-price">$1.99 USD mes <span class="plan-unit">por cuenta</span></p>
+						<ul class="plan-features">
+							<li class="plan-feature">IMAP /  <span class="plan-feature-name">POP 3</span></li>
+                                                        <li class="plan-feature">99.999 % <span class="plan-feature-name">Uptime</span></li>
+							<li class="plan-feature">Triple <span class="plan-feature-name">Protección Anti Spam/Virus</span></li>
+						</ul>
+						<a href="#" class="recomend plan-button">Elegir plan</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="plan-exchange">
+						<h3 class="plan-title">Exchange</h3>
+						<p class="plan-price">$11.90 USD mes <span class="plan-unit">por cuenta</span></p>
+						<ul class="plan-features">
+							<li class="plan-feature">Acceso a <span class="plan-feature-name">Outlook</span></li>
+							<li class="plan-feature">99.999 % <span class="plan-feature-name">Uptime</span></li>
+							<li class="plan-feature">Triple <span class="plan-feature-name">Protección Anti Spam/Virus</span></li>
+						</ul>
+						<a href="#" class="exchange plan-button">Elegir</a>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<input type="button" name='show' class="show-all action-button" value="Mostrar todos" />
+			<input type="button" name='next' class="next action-button" value="Siguiente" />
+		</fieldset>
+		<!-- Search domain -->
+		<fieldset>
+			<h2 class="fs-title">Encuentra tu dominio</h2>
+			<h3 class="fs-subtitle">Escribe el nombre de tu negocio</h3>
+			<input type="text" name="domain" placeholder="www.midominio.com" required />
+			<input type="button" name='previous' class="previous action-button" value="Regresar" />
+			<input type="button" name='next' class="next action-button" value="Siguiente" />
+		</fieldset>
+		<!-- Confirm bill -->
+		<fieldset class="order">
+			<h2 class="fs-title">Confirma tu compra</h2>
+			<h3 class="fs-subtitle">Verifica que todo este bien</h3>
+			<div class="panel panel-primary">
+				<div class="panel-heading">Detalles de la orden</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Descripción</th>
+								<th>Vigencia</th>
+								<th>Precio</th>
+								<th>Precio total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>midominio.com</td>
+								<td>Valido por un año</td>
+								<td>$11.90 USD</td>
+								<td>$11.90 USD</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>Total: $11.90 USD</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<input type="button" name='previous' class="previous action-button" value="Regresar" />
+			<input type="button" name='next' class="next action-button" value="Siguiente" />
+		</fieldset>
+		<!-- Login -->
+		<fieldset>
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="fs-title">Iniciar sesión</h2>
+					<input type="email" name="email" placeholder="Email" required />
+					<input type="password" name="password" placeholder="Contraseña" required />
+					<a href="#" class="plan-button">Entrar</a>
+				</div>
+				<div class="col-md-6">
+					<h2 class="fs-title">Crear cuenta</h2>
+					<input type="email" name="email" placeholder="Email" required />
+					<input type="password" name="password" placeholder="Contraseña" required />
+					<input type="password" name="password" placeholder="Confirma tu contraseña" required />
+					<a href="#" class="plan-button">Registrarme</a>
+				</div>
+			</div>
+			<hr />
+			<input type="button" name='previous' class="previous action-button" value="Regresar" />
+			<input type="button" name='next' class="next action-button" value="Siguiente" />
+		</fieldset>
+		<!-- Payment -->
+		<fieldset>
+			<h2 class="fs-title">Termina tu compra</h2>
+			<h3 class="fs-subtitle">Detalles de contacto</h3>
+			<input type="text" name="fname" placeholder="Nombre" required />
+			<input type="text" name="lname" placeholder="Apellidos" required />
+			<input type="text" name="phone" placeholder="Teléfono" required />
+			<textarea name="address" placeholder="Dirección" required></textarea>
+			<h2 class="fs-subtitle">Elige un método de pago:</h2>
+			<select>
+				<option>Paypal</option>
+				<option>OXXO</option>
+				<option>SPEI</option>
+				<option>Pago con tarjeta</option>
+				<option>Saldo en cuenta</option>
+			</select>
+			<hr />
+			<input type="button" name='previous' class="previous action-button" value="Regresar" />
+			<input type="submit" name='submit' class="submit action-button" value="Comprar" />
+		</fieldset>
+	</form>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<!-- jQuery easing plugin -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
